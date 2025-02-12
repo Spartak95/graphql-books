@@ -1,4 +1,4 @@
 package com.xcoder.graphqlbooks.review;
 
-public class ReviewFilter {
+public record ReviewFilter(Integer rating, Boolean verified, String reviewerName) {
 }
