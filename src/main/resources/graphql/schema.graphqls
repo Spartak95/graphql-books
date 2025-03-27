@@ -1,4 +1,4 @@
-
+# Get data
 type Query {
     books: [Book!]!
     book(id: Int!): Book!
@@ -8,16 +8,19 @@ type Query {
     reviews(filter: ReviewFilter): [Review]!
 }
 
+# Change data
 type Mutation {
     addBook(bookInput: BookInput): Book!
 }
 
+# Define data structure
 type Book {
     id: ID!
     title: String!
     author: Author!
 }
 
+# Define data structure
 type Author {
     id: ID!
     name: String!
@@ -35,6 +38,7 @@ input BookInput {
 # Union BookOrAuthor - This is a type we don't have in Java (they don't share anything in common)
 union SearchItem = Author | Book
 
+# Define data structure
 type Review {
     id: ID!
     rating: Int!
